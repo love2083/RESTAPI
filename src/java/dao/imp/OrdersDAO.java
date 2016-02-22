@@ -113,12 +113,13 @@ public class OrdersDAO implements IOrders{
             result = new ArrayList<>();
             while (rs.next()) {
                 Orders order = new Orders();
-                order.setAddress(rs.getString("Address"));
-                order.setStatus(rs.getString("Status"));
-                order.setDelete(rs.getBoolean("IsDelete"));
-                order.setAccountID(rs.getInt("AccountID"));
-                order.setDateCreate(rs.getDate("DateCreate"));
-                order.setTotalprice(rs.getFloat("TotalPrice"));
+                order.setId(rs.getInt(1));
+                order.setAddress(rs.getString(2));
+                order.setStatus(rs.getString(3));
+                order.setDelete(rs.getBoolean(4));
+                order.setAccountID(rs.getInt(5));
+                order.setDateCreate(rs.getDate(6));
+                order.setTotalprice(rs.getFloat(7));
                 result.add(order);
             }
             
@@ -153,13 +154,13 @@ public class OrdersDAO implements IOrders{
             rs = stm.executeQuery();
             
             while (rs.next()) {
-                result.setId(rs.getInt("ID"));
-                result.setAddress(rs.getString("Address"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("IsDelete"));
-                result.setAccountID(rs.getInt("AccountID"));
-                result.setDateCreate(rs.getDate("DateCreate"));
-                result.setTotalprice(rs.getFloat("TotalPrice"));
+                result.setId(rs.getInt(1));
+                result.setAddress(rs.getString(2));
+                result.setStatus(rs.getString(3));
+                result.setDelete(rs.getBoolean(4));
+                result.setAccountID(rs.getInt(5));
+                result.setDateCreate(rs.getDate(6));
+                result.setTotalprice(rs.getFloat(7));
                 
             }
             
@@ -194,13 +195,13 @@ public class OrdersDAO implements IOrders{
             rs = stm.executeQuery();
             
             while (rs.next()) {
-                result.setId(rs.getInt("ID"));
-                result.setAddress(rs.getString("Address"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("IsDelete"));
-                result.setAccountID(rs.getInt("AccountID"));
-                result.setDateCreate(rs.getDate("DateCreate"));
-                result.setTotalprice(rs.getFloat("TotalPrice"));
+                result.setId(rs.getInt(1));
+                result.setAddress(rs.getString(2));
+                result.setStatus(rs.getString(3));
+                result.setDelete(rs.getBoolean(4));
+                result.setAccountID(rs.getInt(5));
+                result.setDateCreate(rs.getDate(6));
+                result.setTotalprice(rs.getFloat(7));
                 
             }
             
@@ -236,13 +237,13 @@ public class OrdersDAO implements IOrders{
             rs = stm.executeQuery();
             
             while (rs.next()) {
-                result.setId(rs.getInt("ID"));
-                result.setAddress(rs.getString("Address"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("IsDelete"));
-                result.setAccountID(rs.getInt("AccountID"));
-                result.setDateCreate(rs.getDate("DateCreate"));
-                result.setTotalprice(rs.getFloat("TotalPrice"));
+                result.setId(rs.getInt(1));
+                result.setAddress(rs.getString(2));
+                result.setStatus(rs.getString(3));
+                result.setDelete(rs.getBoolean(4));
+                result.setAccountID(rs.getInt(5));
+                result.setDateCreate(rs.getDate(6));
+                result.setTotalprice(rs.getFloat(7));
                 
             }
             

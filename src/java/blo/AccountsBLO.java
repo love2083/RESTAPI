@@ -17,10 +17,10 @@ import utils.Constant;
  */
 public class AccountsBLO {
 
-    private static IAccounts accountService;
-  private static AccountsDAO a= new  AccountsDAO();
+    private  IAccounts accountService;
+//    private static AccountsDAO a = new AccountsDAO();
 
-    public static boolean save(Accounts account) {
+    public  boolean save(Accounts account) {
 
         boolean result = false;
         //validate
@@ -76,6 +76,5 @@ public class AccountsBLO {
         result = accountService.findOneByUsernameAndPassword(username, password);
         return result;
     }
-
 
 }

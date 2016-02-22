@@ -1,19 +1,34 @@
 package models;
 
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by Huy Trinh on 0020/20/02/2016.
  */
 public class Products implements Serializable {
+    @Id
+    @Column(name = "ID", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Column(name = "Name",nullable = false, length = 40)
     private String name;
+    @Column(name = "ID", nullable = false)
     private float price;
+    @Column(name = "ImageLink",nullable = false)
     private String imageLink;
+    @Column(name = "Descriptons",nullable = false)
     private String descriptions;
+    @Column(name = "CoverLink",nullable = false)
     private String coverLink;
+    @Column(name = "CatID", nullable = false)
     private int catID;
+    @Column(name = "Status",nullable = false, length = 15)
     private String status;
+    @Column(name = "IsDelete", nullable = false)
     private boolean isDelete;
 
     public Products() {

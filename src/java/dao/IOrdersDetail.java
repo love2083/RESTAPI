@@ -18,5 +18,6 @@ public interface IOrdersDetail {
     List<OrdersDetail> findAll();
     OrdersDetail findByOrdersID(int id);
     OrdersDetail findByProductID(int id);
+    OrdersDetail findByID(int id);
     
 }

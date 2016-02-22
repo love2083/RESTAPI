@@ -27,10 +27,13 @@ public class Accounts implements Serializable {
     
     @Column(name = "Username", nullable = false,unique = true, length = 40)
     private String username;
-    
+    @Column(name = "Password", nullable = false,length = 40)
     private String password;
+    @Column(name = "Role", nullable = false,length = 40)
     private String role;
+    @Column(name = "Status", nullable = false,length = 15)
     private String status;
+    @Column(name = "IsDelete",nullable = false)
     private boolean isDelete;
 
     public Accounts() {

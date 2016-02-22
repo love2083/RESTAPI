@@ -2,18 +2,32 @@ package models;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by Huy Trinh on 0020/20/02/2016.
  */
 public class Orders implements Serializable {
 
+    @Id
+    @Column(name = "ID", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Column(name = "Address", nullable = false, unique = true, length = 40)
     private String address;
-    private  String status;
+    @Column(name = "Status", nullable = false, length = 15)
+    private String status;
+
+    @Column(name = "IsDelete", nullable = false)
     private boolean isDelete;
+    @Column(name = "AccountID", nullable = false)
     private int accountID;
+    @Column(name = "DateCreate", nullable = false)
     private Date dateCreate;
+    @Column(name = "TotalPrice", nullable = false)
     private float totalprice;
 
     public Orders() {

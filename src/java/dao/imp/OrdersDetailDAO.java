@@ -105,11 +105,11 @@ public class OrdersDetailDAO implements IOrdersDetail{
             result = new ArrayList<>();
             while (rs.next()) {
                 OrdersDetail orderdetail = new OrdersDetail();
-                orderdetail.setId(rs.getInt("ID"));
-                orderdetail.setOrderID(rs.getInt("OdersID"));
-                orderdetail.setProductID(rs.getInt("ProductID"));
-                orderdetail.setQuantity(rs.getInt("Quantity"));
-                orderdetail.setTotal(rs.getFloat("Total"));
+                orderdetail.setId(rs.getInt(1));
+                orderdetail.setOrderID(rs.getInt(2));
+                orderdetail.setProductID(rs.getInt(3));
+                orderdetail.setQuantity(rs.getInt(4));
+                orderdetail.setTotal(rs.getFloat(5));
                 result.add(orderdetail);
 
             }
@@ -148,11 +148,11 @@ public class OrdersDetailDAO implements IOrdersDetail{
 
             while (rs.next()) {
 
-                result.setId(rs.getInt("ID"));
-                result.setOrderID(rs.getInt("OdersID"));
-                result.setProductID(rs.getInt("ProductID"));
-                result.setQuantity(rs.getInt("Quantity"));
-                result.setTotal(rs.getFloat("Total"));
+                result.setId(rs.getInt(1));
+                result.setOrderID(rs.getInt(2));
+                result.setProductID(rs.getInt(3));
+                result.setQuantity(rs.getInt(4));
+                result.setTotal(rs.getFloat(5));
 
             }
         } catch (SQLException e) {
@@ -190,11 +190,11 @@ public class OrdersDetailDAO implements IOrdersDetail{
 
             while (rs.next()) {
 
-                result.setId(rs.getInt("ID"));
-                result.setOrderID(rs.getInt("OdersID"));
-                result.setProductID(rs.getInt("ProductID"));
-                result.setQuantity(rs.getInt("Quantity"));
-                result.setTotal(rs.getFloat("Total"));
+                result.setId(rs.getInt(1));
+                result.setOrderID(rs.getInt(2));
+                result.setProductID(rs.getInt(3));
+                result.setQuantity(rs.getInt(4));
+                result.setTotal(rs.getFloat(5));
 
             }
         } catch (SQLException e) {
@@ -217,5 +217,46 @@ public class OrdersDetailDAO implements IOrdersDetail{
 
         return result;
     }
+@Override
+public OrdersDetail findByID(int id){
+     Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        OrdersDetail result = null;
+        try {
+            con = MakeConnection.makeConnection();
+            String sql = "Select * From OrdersDetail where ID=?";
+            stm = con.prepareStatement(sql);
+            stm.setInt(1, id);
+            rs = stm.executeQuery();
 
+            while (rs.next()) {
+
+                result.setId(rs.getInt(1));
+                result.setOrderID(rs.getInt(2));
+                result.setProductID(rs.getInt(3));
+                result.setQuantity(rs.getInt(4));
+                result.setTotal(rs.getFloat(5));
+
+            }
+        } catch (SQLException e) {
+            e.getMessage();
+        } finally {
+            try {
+                if (stm != null) {
+                    stm.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (Exception e) {
+                e.getMessage();
+            }
+        }
+
+        return result;
+}
 }

@@ -104,9 +104,10 @@ public class CategoriesDAO implements ICategories{
             result = new ArrayList<>();
             while (rs.next()) {
                 Categories cate = new Categories();
-                cate.setName(rs.getString("Name"));
-                cate.setStatus(rs.getString("Status"));
-                cate.setDelete(rs.getBoolean("IsDelete"));
+                cate.setId(rs.getInt(1));
+                cate.setName(rs.getString(2));
+                cate.setStatus(rs.getString(3));
+                cate.setDelete(rs.getBoolean(4));
                 result.add(cate);
             }
         } catch (SQLException e) {
@@ -141,10 +142,10 @@ public class CategoriesDAO implements ICategories{
 
             while (rs.next()) {
                 Categories cate = new Categories();
-                cate.setId(rs.getInt("ID"));
-                cate.setName(rs.getString("Name"));
-                cate.setStatus(rs.getString("Status"));
-                cate.setDelete(rs.getBoolean("IsDelete"));
+                cate.setId(rs.getInt(1));
+                cate.setName(rs.getString(2));
+                cate.setStatus(rs.getString(3));
+                cate.setDelete(rs.getBoolean(4));
 
             }
 
@@ -182,10 +183,10 @@ public class CategoriesDAO implements ICategories{
             rs = stm.executeQuery();
             while (rs.next()) {
                 result = new Categories();
-                result.setId(rs.getInt("ID"));
-                result.setName(rs.getString("Name"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("IsDelete"));
+                result.setId(rs.getInt(1));
+                result.setName(rs.getString(2));
+                result.setStatus(rs.getString(3));
+                result.setDelete(rs.getBoolean(4));
 
             }
 

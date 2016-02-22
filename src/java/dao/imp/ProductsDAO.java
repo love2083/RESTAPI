@@ -118,15 +118,15 @@ public class ProductsDAO implements IProducts {
             result = new ArrayList<>();
             while (rs.next()) {
                 Products product = new Products();
-                product.setId(rs.getInt("ID"));
-                product.setName(rs.getString("Name"));
-                product.setPrice(rs.getFloat("Price"));
-                product.setImageLink(rs.getString("ImageLink"));
-                product.setDescriptions(rs.getString("Descriptions"));
-                product.setCoverLink(rs.getString("CoverLink"));
-                product.setCatID(rs.getInt("CatID"));
-                product.setStatus(rs.getString("Status"));
-                product.setDelete(rs.getBoolean("IsDelete"));
+                product.setId(rs.getInt(1));
+                product.setName(rs.getString(2));
+                product.setPrice(rs.getFloat(3));
+                product.setImageLink(rs.getString(4));
+                product.setDescriptions(rs.getString(5));
+                product.setCoverLink(rs.getString(6));
+                product.setCatID(rs.getInt(7));
+                product.setStatus(rs.getString(8));
+                product.setDelete(rs.getBoolean(9));
                 result.add(product);
 
             }
@@ -165,15 +165,15 @@ public class ProductsDAO implements IProducts {
             rs = stm.executeQuery();
 
             while (rs.next()) {
-                result.setId(rs.getInt("ID"));
-                result.setName(rs.getString("Name"));
-                result.setPrice(rs.getFloat("Price"));
-                result.setImageLink(rs.getString("ImageLink"));
-                result.setDescriptions(rs.getString("Descriptions"));
-                result.setCoverLink(rs.getString("CoverLink"));
-                result.setCatID(rs.getInt("CatID"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("IsDelete"));
+                result.setId(rs.getInt(1));
+                result.setName(rs.getString(2));
+                result.setPrice(rs.getFloat(3));
+                result.setImageLink(rs.getString(4));
+                result.setDescriptions(rs.getString(5));
+                result.setCoverLink(rs.getString(6));
+                result.setCatID(rs.getInt(7));
+                result.setStatus(rs.getString(8));
+                result.setDelete(rs.getBoolean(9));
 
             }
         } catch (SQLException e) {
@@ -213,15 +213,15 @@ public class ProductsDAO implements IProducts {
 
             while (rs.next()) {
 
-                result.setId(rs.getInt("ID"));
-                result.setName(rs.getString("Name"));
-                result.setPrice(rs.getFloat("Price"));
-                result.setImageLink(rs.getString("ImageLink"));
-                result.setDescriptions(rs.getString("Descriptions"));
-                result.setCoverLink(rs.getString("CoverLink"));
-                result.setCatID(rs.getInt("CatID"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("IsDelete"));
+                result.setId(rs.getInt(1));
+                result.setName(rs.getString(2));
+                result.setPrice(rs.getFloat(3));
+                result.setImageLink(rs.getString(4));
+                result.setDescriptions(rs.getString(5));
+                result.setCoverLink(rs.getString(6));
+                result.setCatID(rs.getInt(7));
+                result.setStatus(rs.getString(8));
+                result.setDelete(rs.getBoolean(9));
 
             }
         } catch (SQLException e) {
@@ -261,15 +261,15 @@ public class ProductsDAO implements IProducts {
 
             while (rs.next()) {
 
-                result.setId(rs.getInt("ID"));
-                result.setName(rs.getString("Name"));
-                result.setPrice(rs.getFloat("Price"));
-                result.setImageLink(rs.getString("ImageLink"));
-                result.setDescriptions(rs.getString("Descriptions"));
-                result.setCoverLink(rs.getString("CoverLink"));
-                result.setCatID(rs.getInt("CatID"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("IsDelete"));
+                result.setId(rs.getInt(1));
+                result.setName(rs.getString(2));
+                result.setPrice(rs.getFloat(3));
+                result.setImageLink(rs.getString(4));
+                result.setDescriptions(rs.getString(5));
+                result.setCoverLink(rs.getString(6));
+                result.setCatID(rs.getInt(7));
+                result.setStatus(rs.getString(8));
+                result.setDelete(rs.getBoolean(9));
 
             }
         } catch (SQLException e) {
@@ -309,16 +309,15 @@ public class ProductsDAO implements IProducts {
 
             while (rs.next()) {
 
-                result.setId(rs.getInt("ID"));
-                result.setName(rs.getString("Name"));
-                result.setPrice(rs.getFloat("Price"));
-                result.setImageLink(rs.getString("ImageLink"));
-                result.setDescriptions(rs.getString("Descriptions"));
-                result.setCoverLink(rs.getString("CoverLink"));
-                result.setCatID(rs.getInt("CatID"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("IsDelete"));
-
+                result.setId(rs.getInt(1));
+                result.setName(rs.getString(2));
+                result.setPrice(rs.getFloat(3));
+                result.setImageLink(rs.getString(4));
+                result.setDescriptions(rs.getString(5));
+                result.setCoverLink(rs.getString(6));
+                result.setCatID(rs.getInt(7));
+                result.setStatus(rs.getString(8));
+                result.setDelete(rs.getBoolean(9));
             }
         } catch (SQLException e) {
             e.getMessage();

@@ -154,12 +154,12 @@ public  boolean update(Accounts inData) {
 
             while (rs.next()) {
                 result = new Accounts();
-                result.setId(rs.getInt("ID"));
-                result.setUsername(rs.getString("Username"));
-                result.setPassword(rs.getString("Password"));
-                result.setRole(rs.getString("Role"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("isDelete"));
+                result.setId(rs.getInt(1));
+                result.setUsername(rs.getString(2));
+                result.setPassword(rs.getString(3));
+                result.setRole(rs.getString(4));
+                result.setStatus(rs.getString(5));
+                result.setDelete(rs.getBoolean(6));
 
             }
         } catch (SQLException ex) {
@@ -197,12 +197,12 @@ public  boolean update(Accounts inData) {
             rs = stm.executeQuery();
             while (rs.next()) {
                 result = new Accounts();
-                result.setId(rs.getInt("ID"));
-                result.setUsername(rs.getString("Username"));
-                result.setPassword(rs.getString("Password"));
-                result.setRole(rs.getString("Role"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("isDelete"));
+                result.setId(rs.getInt(1));
+                result.setUsername(rs.getString(2));
+                result.setPassword(rs.getString(3));
+                result.setRole(rs.getString(4));
+                result.setStatus(rs.getString(5));
+                result.setDelete(rs.getBoolean(6));
 
             }
             
@@ -255,12 +255,12 @@ public  boolean update(Accounts inData) {
 
             while (rs.next()) {
                 result = new Accounts();
-                result.setId(rs.getInt("ID"));
-                result.setUsername(rs.getString("Username"));
-                result.setPassword(rs.getString("Password"));
-                result.setRole(rs.getString("Role"));
-                result.setStatus(rs.getString("Status"));
-                result.setDelete(rs.getBoolean("isDelete"));
+                result.setId(rs.getInt(1));
+                result.setUsername(rs.getString(2));
+                result.setPassword(rs.getString(3));
+                result.setRole(rs.getString(4));
+                result.setStatus(rs.getString(5));
+                result.setDelete(rs.getBoolean(6));
              
             }
 
