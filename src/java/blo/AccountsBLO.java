@@ -6,6 +6,7 @@
 package blo;
 
 import dao.IAccounts;
+import dao.imp.AccountsDAO;
 import java.util.List;
 import models.Accounts;
 import utils.Constant;
@@ -17,6 +18,7 @@ import utils.Constant;
 public class AccountsBLO {
 
     private static IAccounts accountService;
+  private static AccountsDAO a= new  AccountsDAO();
 
     public static boolean save(Accounts account) {
 
@@ -75,17 +77,5 @@ public class AccountsBLO {
         return result;
     }
 
-    public static void main(String[] args) {
-        Accounts account = new Accounts();
-        account.setUsername("admin");
-        account.setPassword("admin");
-        account.setRole(Constant.Role.admin);
-        account.setStatus(Constant.Status.active);
-        account.setDelete(false);
-        System.out.println(account.getPassword());
-        boolean result 
-                = save(account);
-        System.out.println(result);
 
-    }
 }

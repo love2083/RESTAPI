@@ -13,7 +13,7 @@ import models.Accounts;
  * @author Huy Trinh
  */
 public interface IAccounts {
-       boolean save(Accounts inData);
+   public    boolean save(Accounts inData);
       boolean update(Accounts inData);
       List<Accounts> findAll();
       Accounts findOneByUsername(String username);

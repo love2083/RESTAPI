@@ -6,6 +6,8 @@
 package controllers;
 
 import blo.AccountsBLO;
+import dao.imp.AccountsDAO;
+import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
@@ -32,7 +34,7 @@ public class AccountResource {
      */
     public AccountResource() {
     }
-private AccountsBLO accountsRepository;
+private AccountsDAO accountsRepository= new AccountsDAO();
     /**
      * Retrieves representation of an instance of controllers.AccountResource
      * @return an instance of models.Accounts
@@ -40,8 +42,8 @@ private AccountsBLO accountsRepository;
     @GET
     @Path("list-all")
     @Produces(MediaType.APPLICATION_JSON)
-    public Accounts getAll() {
-   return   (Accounts) accountsRepository.findAll();
+    public List<Accounts> getAll() {
+   return   accountsRepository.findAll();
     }
 
     /**

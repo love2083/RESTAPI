@@ -23,6 +23,7 @@ import utils.MakeConnection;
  * @author Huy Trinh
  */
 public class AccountsDAO implements IAccounts{
+
     @Override
     public  boolean save(Accounts inData) {
         Connection con = null;
@@ -61,7 +62,7 @@ public class AccountsDAO implements IAccounts{
     }
 
     @Override
-    public  boolean update(Accounts inData) {
+public  boolean update(Accounts inData) {
         Connection con = null;
         PreparedStatement stm = null;
         boolean result = false;
@@ -108,14 +109,13 @@ public class AccountsDAO implements IAccounts{
             result = new ArrayList<>();
             while (rs.next()) {
                 Accounts account = new Accounts();
-                account.setId(rs.getInt("ID"));
-                account.setUsername(rs.getString("Usename"));
-                account.setPassword(rs.getString("Password"));
-                account.setRole(rs.getString("Role"));
-                account.setStatus(rs.getString("Status"));
-                account.setDelete(rs.getBoolean("IsDelete"));
-                       
-                
+                account.setId(rs.getInt(1));
+                account.setUsername(rs.getString(2));
+                account.setPassword(rs.getString(3));
+                account.setRole(rs.getString(4));
+                account.setStatus(rs.getString(5));
+                account.setDelete(rs.getBoolean(6));
+                     
                 result.add(account);
             }
 
@@ -137,7 +137,8 @@ public class AccountsDAO implements IAccounts{
         }
         return result;
     }
-@Override
+
+    @Override
     public  Accounts findOneByUsername(String username) {
         Connection con = null;
         PreparedStatement stm = null;
@@ -180,7 +181,8 @@ public class AccountsDAO implements IAccounts{
         }
         return result;
     }
-@Override
+
+    @Override
     public  Accounts findOneByUsernameAndPassword(String username, String password) {
         Connection con = null;
         PreparedStatement stm = null;
@@ -230,7 +232,13 @@ public class AccountsDAO implements IAccounts{
         return result;
 
     }
-@Override
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    @Override
     public  Accounts findOneById(int id) {
         Connection con = null;
         PreparedStatement stm = null;
